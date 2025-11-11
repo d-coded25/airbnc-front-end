@@ -6,7 +6,8 @@ function PropertyGrid(props) {
   const { properties } = props;
 
   const propertyCards = properties.map((property) => {
-    return <PropertyCard property={property} />;
+    const { property_id: id } = property;
+    return <PropertyCard property={property} key={id} />;
   });
 
   return (
