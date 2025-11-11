@@ -1,0 +1,8 @@
+.property-grid {
+  border: 1px solid orange;
+}
+
+.property-grid ul {
+  list-style: none;
+  padding-left: 0;
+}
