@@ -1,12 +1,18 @@
 import './PropertyGrid.css';
 
-function PropertyGrid() {
+import PropertyCard from './PropertyCard';
+
+function PropertyGrid(props) {
+  const { properties } = props;
+
+  const propertyCards = properties.map((property) => {
+    return <PropertyCard property={property} />;
+  });
+
   return (
     <section className="property-grid">
       <article>
-        <ul>
-          <li>Property Grid</li>
-        </ul>
+        <ul>{propertyCards}</ul>
       </article>
     </section>
   );
