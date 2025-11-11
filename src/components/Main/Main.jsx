@@ -1,9 +1,13 @@
 import './Main.css';
 
-function Main() {
+import PropertyGrid from './PropertyGrid';
+
+function Main(props) {
+  const { properties } = props;
+
   return (
     <main className="main">
-      <h1>Main Section</h1>
+      <PropertyGrid properties={properties} />
     </main>
   );
 }
