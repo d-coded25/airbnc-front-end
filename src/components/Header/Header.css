@@ -1,0 +1,15 @@
+.header {
+  border: 1px solid red;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 200;
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+.header ul {
+  font-size: 1rem;
+  list-style: none;
+}
