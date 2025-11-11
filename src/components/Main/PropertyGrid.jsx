@@ -12,9 +12,7 @@ function PropertyGrid(props) {
 
   return (
     <section className="property-grid">
-      <article>
-        <ul>{propertyCards}</ul>
-      </article>
+      <ul>{propertyCards}</ul>
     </section>
   );
 }
