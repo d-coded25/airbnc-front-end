@@ -1,22 +1,26 @@
+import { Link } from 'react-router';
 import './PropertyCard.css';
 
 function PropertyCard(props) {
   const { property } = props;
   const {
+    property_id: id,
     property_name: name,
     location,
     price_per_night: price,
-    img,
+    image,
   } = property;
 
   return (
     <li className="property-card">
-      <article>
-        <img src={img} alt={name} />
-        <h2>{name}</h2>
-        <h3>Location: {location}</h3>
-        <h3>£{price} per night</h3>
-      </article>
+      <Link to={`/api/properties/${id}`}>
+        <article>
+          <img src={image} alt={name} />
+          <h2>{name}</h2>
+          <h3>Location: {location}</h3>
+          <h3>£{price} per night</h3>
+        </article>
+      </Link>
     </li>
   );
 }
