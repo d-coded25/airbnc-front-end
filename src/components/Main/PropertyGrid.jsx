@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
-
 import { getProperties } from '../../api';
 import PropertyCard from './PropertyCard';
-
 import './PropertyGrid.css';
 
 function PropertyGrid() {

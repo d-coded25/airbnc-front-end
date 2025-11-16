@@ -1,5 +1,4 @@
 import PropertyGrid from './PropertyGrid';
-
 import './Main.css';
 
 function Main() {
