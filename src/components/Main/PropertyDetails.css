@@ -1,0 +1,8 @@
+.property-details {
+  border: 1px solid grey;
+}
+
+.property-details img {
+  width: 200px;
+  height: 200px;
+}
