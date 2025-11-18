@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/api/properties/:id" element={<PropertyDetails />} />
+        <Route path="/property/:id" element={<PropertyDetails />} />
       </Routes>
       <Footer />
     </>
