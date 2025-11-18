@@ -13,7 +13,7 @@ function PropertyCard(props) {
 
   return (
     <li className="property-card">
-      <Link to={`/api/properties/${id}`}>
+      <Link to={`/property/${id}`}>
         <article>
           <img src={image} alt={name} />
           <h2>{name}</h2>
