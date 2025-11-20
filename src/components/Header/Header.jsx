@@ -8,7 +8,9 @@ function Header() {
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link className="properties-link" to="/">
+              Home
+            </Link>
           </li>
         </ul>
       </div>
