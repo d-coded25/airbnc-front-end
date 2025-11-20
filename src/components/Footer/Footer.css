@@ -1,15 +1,25 @@
 .footer {
-  border: 1px solid blue;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(315deg, #fb5a88 45%, #f8f8ff);
+  border-radius: 4px;
 }
 
 .footer ul {
   font-size: 1rem;
   list-style: none;
+  padding-left: 0;
+}
+
+.footer a {
+  color: #f8f8ff;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .footer p {
+  color: #f8f8ff;
   font-size: 0.75rem;
-  font-weight: 200;
   text-align: center;
   letter-spacing: 0.5px;
 }
