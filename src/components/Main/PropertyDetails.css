@@ -2,7 +2,12 @@
   border: 1px solid grey;
 }
 
+.property-details ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 .property-details img {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
 }

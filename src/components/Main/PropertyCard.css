@@ -1,8 +1,36 @@
+.property-card {
+  width: 100%;
+}
+
+.property-card .property-link {
+  text-decoration: none;
+}
+
 .property-card article {
-  border: 1px solid purple;
+  color: #444;
+  height: 400px;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0.1px 2px 10px #00000040;
 }
 
 .property-card img {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.property-card h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.property-card h3 {
+  font-size: 1rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-align: right;
 }

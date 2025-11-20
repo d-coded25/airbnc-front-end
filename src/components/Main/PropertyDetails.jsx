@@ -80,7 +80,7 @@ function PropertyDetails() {
         <ul>{imagesList}</ul>
         <h2>{name}</h2>
         <h3>{description}</h3>
-        <h2>Location: {location}</h2>
+        <h2>{location}</h2>
         <h3>£{price} per night</h3>
         <h4>{host}</h4>
         <img src={host_avatar} alt={host} />
