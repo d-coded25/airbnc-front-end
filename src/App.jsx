@@ -7,14 +7,14 @@ import './App.css';
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/property/:id" element={<PropertyDetails />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 
