@@ -14,7 +14,6 @@ function PropertyCard(props) {
   return (
     <li className="property-card">
       <Link className="property-link" to={`/property/${id}`}>
-      <Link className="property-link" to={`/property/${id}`}>
         <article>
           <img src={image} alt={name} />
           <h2>{name}</h2>
