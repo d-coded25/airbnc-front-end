@@ -13,12 +13,14 @@ function PropertyCard(props) {
 
   return (
     <li className="property-card">
-      <Link to={`/property/${id}`}>
+      <Link className="property-link" to={`/property/${id}`}>
         <article>
           <img src={image} alt={name} />
           <h2>{name}</h2>
-          <h3>Location: {location}</h3>
-          <h3>£{price} per night</h3>
+          <h3>{location}</h3>
+          <h3>
+            <span>£{price}</span> per night
+          </h3>
         </article>
       </Link>
     </li>
