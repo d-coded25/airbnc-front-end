@@ -12,31 +12,32 @@ function PropertyDetails() {
   const { id } = useParams();
 
   const fetchProperty = async function (id) {
-    try {
-      const { property } = await getProperty(id);
-      setProperty(property);
-      setIsLoading(false);
-    } catch (err) {
-      setHasErrored(err);
-      setIsLoading(false);
-    }
+    const { property } = await getProperty(id);
+    return property;
   };
 
   const fetchPropertyReviews = async function (id) {
+    const { reviews } = await getPropertyReviews(id);
+    return reviews;
+  };
+
+  useEffect(() => {
     try {
-      const { reviews } = await getPropertyReviews(id);
-      setReviews(reviews);
-      setIsLoading(false);
+      const fetchPropertyAndReviews = async function (id) {
+        const [property, reviews] = await Promise.all([
+          fetchProperty(id),
+          fetchPropertyReviews(id),
+        ]);
+        setProperty(property);
+        setReviews(reviews);
+        setIsLoading(false);
+      };
+      fetchPropertyAndReviews(id);
     } catch (err) {
       setHasErrored(err);
       setIsLoading(false);
     }
-  };
-
-  useEffect(() => {
-    fetchProperty(id);
-    fetchPropertyReviews(id);
-  }, []);
+  }, [id, property, reviews]);
 
   const {
     property_name: name,
@@ -68,7 +69,9 @@ function PropertyDetails() {
       return (
         <li key={id}>
           <p>{comment}</p>
-          <h3>{rating}</h3>
+          <h4>
+            <span>{rating}</span> / 5
+          </h4>
           <h4>{guest}</h4>
           <img src={guest_avatar} alt={guest} />
         </li>
@@ -77,19 +80,25 @@ function PropertyDetails() {
 
     content = (
       <>
-        <ul>{imagesList}</ul>
-        <h2>{name}</h2>
-        <h3>{description}</h3>
-        <h2>Location: {location}</h2>
-        <h3>£{price} per night</h3>
-        <h4>{host}</h4>
-        <img src={host_avatar} alt={host} />
-        <ul>{reviewsList}</ul>
+        <article className="property-details">
+          <ul className="images">{imagesList}</ul>
+          <h2>{name}</h2>
+          <h3>{description}</h3>
+          <h4>{location}</h4>
+          <h4>
+            <span>£{price}</span> per night
+          </h4>
+          <h4>{host}</h4>
+          <img src={host_avatar} alt={host} />
+
+          <h2>Reviews</h2>
+          <ul className="reviews">{reviewsList}</ul>
+        </article>
       </>
     );
   }
 
-  return <article className="property-details">{content}</article>;
+  return <section>{content}</section>;
 }
 
 export default PropertyDetails;

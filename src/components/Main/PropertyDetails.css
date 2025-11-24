@@ -1,8 +1,99 @@
 .property-details {
-  border: 1px solid grey;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  margin: 20px 0 20px 0;
+  border-radius: 5px;
+  box-shadow: 0.1px 2px 10px #00000040;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.property-details img {
-  width: 200px;
-  height: 200px;
+.property-details .images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.property-details .images,
+.property-details .reviews {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.property-details .images li img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border: 0.25px solid #fb5a88;
+  border-radius: 5px;
+}
+
+.property-details img,
+.property-details .reviews li img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+}
+
+.property-details > img,
+.property-details .reviews li img {
+  border-radius: 50%;
+  border: 1px solid #fb5a88;
+}
+
+.property-details > img {
+  margin-left: auto;
+}
+
+.property-details h2 {
+  color: #444;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: left;
+  border-left: 5px solid #fb5a88;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.property-details h3,
+.property-details p {
+  color: #444;
+  font-size: 1rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.property-details h4 {
+  color: #444;
+  font-size: 1rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-align: right;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.property-details h4 span,
+.property-details .reviews li h4 span {
+  font-weight: 400;
+  border-bottom: 1px solid #fb5a88;
+}
+
+.property-details h3,
+.property-details .reviews li p {
+  text-align: left;
+}
+
+.property-details .reviews li img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 25px;
 }
