@@ -29,4 +29,14 @@ const getPropertyReviews = async function (id) {
   }
 };
 
-export { getProperties, getProperty, getPropertyReviews };
+const postReview = async function (user, id, comment, rating) {
+  try {
+    const { user_id: guest_id } = user;
+    const reviewData = { guest_id, comment, rating };
+    await axios.post(`${baseURL}/api/properties/${id}/reviews`, reviewData);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+export { getProperties, getProperty, getPropertyReviews, postReview };
