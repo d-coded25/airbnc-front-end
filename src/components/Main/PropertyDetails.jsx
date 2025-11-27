@@ -91,6 +91,8 @@ function PropertyDetails() {
           <h4>{host}</h4>
           <img src={host_avatar} alt={host} />
 
+          <button className="review-btn">Leave A Review</button>
+
           <h2>Reviews</h2>
           <ul className="reviews">{reviewsList}</ul>
         </article>
