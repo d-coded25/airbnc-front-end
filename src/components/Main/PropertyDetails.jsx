@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router';
+import { useParams, Link } from 'react-router';
 import { getProperty, getPropertyReviews } from '../../api';
 import './PropertyDetails.css';
 
@@ -37,7 +37,7 @@ function PropertyDetails() {
       setHasErrored(err);
       setIsLoading(false);
     }
-  }, [id, property, reviews]);
+  }, [id]);
 
   const {
     property_name: name,
@@ -91,7 +91,9 @@ function PropertyDetails() {
           <h4>{host}</h4>
           <img src={host_avatar} alt={host} />
 
-          <button className="review-btn">Leave A Review</button>
+          <Link to={`/property/${id}/review-form`}>
+            <button className="review-btn">Leave A Review</button>
+          </Link>
 
           <h2>Reviews</h2>
           <ul className="reviews">{reviewsList}</ul>

@@ -79,7 +79,7 @@
   margin-left: auto;
 }
 
-.property-details button {
+.property-details .review-btn {
   color: #f8f8ff;
   font-size: 1rem;
   height: 50px;
@@ -88,7 +88,6 @@
   border: none;
   border-radius: 5px;
   box-shadow: 0.1px 2px 10px #00000040;
-  align-self: center;
 }
 
 .property-details h4 span,
