@@ -1,16 +1,46 @@
-# React + Vite
+# Airbnc - Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview:
 
-Currently, two official plugins are available:
+Airbnc front-end is a simplified front-end implementation of the Airbnb platform using the Mobile-first design approach. The front-end application interacts with the Airbnc back-end application to fetch and display Airbnb-style resources.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technology Stack
 
-## React Compiler
+- JavaScript
+- React JS
+- React Router
+- HTML
+- CSS
+- Axios
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project Setup
 
-## Expanding the ESLint configuration
+### 1. Install Dependencies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Install all required Node.js dependencies by running the following NPM script:
+
+```sh
+npm install
+```
+
+### 2. Run The Development Server
+
+Start the Express server in development mode by run the following NPM script
+
+```sh
+npm run dev
+```
+
+Development server will run on:
+
+```sh
+http://localhost:5173
+```
+
+## Future Improvements
+
+As a property guest user:
+
+- Delete reviews
+- Sort and filter properties
+- Make the application responsive to differing screen sizes
